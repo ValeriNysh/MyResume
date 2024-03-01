@@ -4,8 +4,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding: 40px;
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 ul, ol {
@@ -19,11 +20,28 @@ h5 {
 }
 
 .wrapper {
-    width: 100%;
+    /* width: calc(100% - 80px); */
     max-width: 1920px;
     min-width: 320px;
-    margin: 0 auto;
+    margin: 40px;
 }
+
+/* #menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 70px;
+    height: 70px;
+}
+
+#menu {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 80px;
+    z-index: 1;
+    background-color: #e6f3ff;
+} */
 
 .main-aside {
     display: flex;
@@ -74,11 +92,69 @@ h5 {
 }
 
 .my-tasks {
-    color: #595959;
+    color: #000;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
     line-height: 24px; /* 171.429% */
 }
+
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+    align-items: center;
+    justify-content: center;
+    background-color: #FCF4E6;
+    /* #D4CBBC #DFCEB6 # */
+    height: 200px;
+    padding: 50px;
+    color: #000;
+    margin-top: 50px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+footer p {
+    margin: 20px 0 0 0;
+}
+
+footer a {
+    margin: 20px 0 0 0;
+    text-decoration: none;
+    color: #000;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+#footer-email {
+    margin-top: 10px;
+}
+
+
+.footer-contact-link {
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+.footer-contact-link:hover {
+    text-decoration: none;
+}
+
+.footer-contact-text:hover {
+    text-decoration: underline;
+}
+
+
 
 /* HEADER */
 
@@ -187,16 +263,15 @@ header {
     font-weight: 700;
 }
 
-/* .contact-link:active {
-    font-weight: 400;
-} */
-
-
-
-.contact-icon-container {
+.icon-container {
     vertical-align: middle;
     display: inline-box;
     margin-right: 10px;
+}
+
+#documents-section .project-link {
+    margin: 0;
+    font-size: 14px;
 }
 
 
@@ -287,6 +362,7 @@ header {
     margin-top: 4px;
     margin-bottom: 12px;
     text-align: center;
+    justify-content: center;
     display: inline-block;
     border: 2px solid rgba(91, 78, 229, 0.244);
     border-radius: 5px;
@@ -298,6 +374,7 @@ header {
     font-size: 14px;
     line-height: 28px;
     padding: 6px 24px;
+    justify-content: center;
     text-decoration: none;
 }
 
@@ -305,9 +382,16 @@ button:hover {
     background-color: #c3d7e7;
 }
 
-/* button:active {
-    background-color: transparent;
-} */
+.contact-icon {
+    /* vertical-align: middle; */
+    vertical-align:text-bottom;
+    width: 24px;
+}
+
+#documents-section .contact-icon {
+    vertical-align:text-bottom;
+    width: 18px;
+}
 
 
 @media screen and (max-width: 1350px) {
@@ -329,8 +413,8 @@ button:hover {
 }
 
 @media screen and (max-width: 1250px) {
-    body {
-        padding: 30px;
+    .wrapper {
+        margin: 30px;
     }
 
     header {
@@ -382,8 +466,8 @@ button:hover {
 
 @media screen and (max-width: 1070px) {
     
-    body {
-        padding: 10px;
+    .wrapper {
+        margin: 10px;
     }
 
     .sidebar {
@@ -496,8 +580,8 @@ button:hover {
 
 
 @media screen and (max-width: 757px) {
-    body{
-        padding: 0;
+    .wrapper{
+        margin: 0;
     }
 
     header {
@@ -537,15 +621,21 @@ button:hover {
         font-size: 15px;
     }
 
+    footer {
+        gap: 36px;
+    }
+
+    footer .icon-container {
+        margin-right: 5px;
+    }
+
 }
 
 
 /* MOBILE VERSION max-width: 640px */
 
-@media screen and (max-width: 640px) {    
+@media screen and (max-width: 647px) {    
     body {
-        /* background: linear-gradient(to left, #dae5ef, #fdf7e7); */
-        /* background: linear-gradient(to left, #fbfdff, #fffefc); */
         background: #fffefc;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -632,7 +722,7 @@ button:hover {
         width: 24px;
     }
 
-    .contact-icon-container {
+    .icon-container {
         margin-right: 5px;
     }
 
@@ -672,6 +762,14 @@ button:hover {
 
     }
 
+    footer {
+        gap: 24px;
+    }
+
+    footer #footer-nav-side a {
+        margin-top: 10px;
+    }
+
     #skills-section {
         order: 4;
     }
@@ -691,7 +789,10 @@ button:hover {
     #projects-section {
         order: 8;
     }
-    
+
+    #documents-section {
+        order: 9;
+    }    
 }
 
 
@@ -712,8 +813,25 @@ button:hover {
         font-size: 16px;
     }
 
+    footer {
+        padding: 30px;
+        gap: 10px;
+    }
+
+    #footer-contacts, footer p {
+        align-items: end;
+        text-align: right;
+    }
+
+
+    footer a, footer p, footer span {
+        font-size: 12px;
+    }
+
+    footer .contact-icon {
+        visibility: hidden;
+        width: 0px;
+    }
 }
-
-
 
 

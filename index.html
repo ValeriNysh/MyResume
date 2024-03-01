@@ -16,6 +16,19 @@
   <body>
     <!-- Wrapper -->
     <div class="wrapper">
+      <!-- Menu Button -->
+      <!-- <div>
+        <button id="menu-btn" onclick="toggleMenu()"></button>
+      </div> -->
+      <!-- Hidden Menu -->
+      <!-- <div id="menu">
+        <ul>
+          <li>Main Page</li>
+          <li>Documents</li>
+          <li>Contacts</li>
+        </ul>
+      </div> -->
+
       <!-- Header Info -->
       <header>
         <!-- My info -->
@@ -221,7 +234,7 @@
               <div id="contacts">
                 <p>
                   <a class="contact-link" href="tel:+491602309896">
-                    <span class="contact-icon-container">
+                    <span class="icon-container">
                       <img
                         class="contact-icon"
                         src="img\phone_24x24.png"
@@ -235,7 +248,7 @@
                 </p>
                 <p>
                   <a class="contact-link" href="mailto:vani280301@gmail.com">
-                    <span class="contact-icon-container">
+                    <span class="icon-container">
                       <img
                         class="contact-icon"
                         src="img\Mail_24x24.png"
@@ -251,9 +264,10 @@
             </div>
           </div>
 
-          <!-- Tech skills -->
+          <!-- Skills -->
           <div id="skills-section">
-            <div class="section-container">
+            <!-- Tech skills -->
+            <div id="tech-skills" class="section-container">
               <h3 class="section-title">Tech skills</h3>
               <div>
                 <h4 class="subsection-title">Programming languages:</h4>
@@ -287,7 +301,7 @@
             </div>
 
             <!-- Soft skills -->
-            <div class="section-container">
+            <div id="soft-skills" class="section-container">
               <h3 class="section-title">Soft skills</h3>
               <ul class="list">
                 <li>Teamwork</li>
@@ -303,7 +317,7 @@
             </div>
 
             <!-- Language Skills -->
-            <div class="section-container">
+            <div id="language-skills" class="section-container">
               <h3 class="section-title">Language skills</h3>
               <ul class="list">
                 <li><b>Ukrainian</b> — Native</li>
@@ -313,16 +327,117 @@
               </ul>
               <button class="document-link">
                 <a href="documents\DTZ Deutsch Zertifikat.jpg" target="_blank"
-                  >DTZ Deutsch Zertifikat</a
+                  >DTZ Zertifikat</a
                 >
               </button>
             </div>
+          </div>
+
+          <!-- All Documents -->
+          <div id="documents-section" class="section-container">
+            <h3 class="section-title">All documents</h3>
+            <ul class="list">
+              <li>
+                <a
+                  class="project-link"
+                  href="documents\Lebenslauf - Valeriia Nyshchenko.pdf"
+                  target="_blank"
+                  >Lebenslauf (CV)</a
+                >
+              </li>
+              <li>
+                <a
+                  class="project-link"
+                  href="documents\Bachelor - original.pdf"
+                  target="_blank"
+                  >Zeugnis (Original mit Übersetzung)</a
+                >
+              </li>
+              <li>
+                <a
+                  class="project-link"
+                  href="documents\Letter of recommendation - PNN.pdf"
+                  target="_blank"
+                  >Letter of recommendation - PNN Soft</a
+                >
+              </li>
+              <li>
+                <a
+                  class="project-link"
+                  href="documents\Recommendation Letter - IT Step.pdf"
+                  target="_blank"
+                  >Letter of recommendation - IT Step</a
+                >
+              </li>
+              <li>
+                <a
+                  class="project-link"
+                  href="documents\Certificate SkillSuccess.pdf"
+                  target="_blank"
+                  >Certificate of completion - Skill Success</a
+                >
+              </li>
+              <li>
+                <a
+                  class="project-link"
+                  href="documents\DTZ Deutsch Zertifikat.jpg"
+                  target="_blank"
+                  >Deutsch-Test Certificate B1</a
+                >
+              </li>
+            </ul>
+            <button class="document-link">
+              <a href="documents\DTZ Deutsch Zertifikat.jpg" target="_blank">
+                <span class="icon-container">
+                  <img
+                    class="contact-icon"
+                    src="img\download.png"
+                    alt="D:"
+                  /> </span
+                >Download all</a
+              >
+            </button>
           </div>
         </aside>
       </div>
     </div>
 
-    <footer></footer>
+    <footer>
+      <div id="footer-nav-side" class="footer-column">
+        <a href="#tech-skills">Tech skills</a>
+        <a href="#soft-skills">Soft skills</a>
+        <a href="#language-skills">Language skills</a>
+      </div>
+
+      <div id="footer-nav-main" class="footer-column">
+        <a href="#experience-section">Work experience</a>
+        <a href="#education">Education</a>
+        <a href="#projects-section">My Projects</a>
+      </div>
+
+      <div id="footer-contacts" class="footer-column">
+        <p><b>Valeriia Nyshchenko</b></p>
+        <p>Aschaffenburg, Deutschland</p>
+        <p id="footer-phone">
+          <a class="footer-contact-link" href="tel:+491602309896">
+            <span class="icon-container">
+              <img class="contact-icon" src="img\phone_24x24.png" alt="C:" />
+            </span>
+            <span id="phone" class="footer-contact-text">+49 160 230 9896</span>
+          </a>
+        </p>
+        <p id="footer-email">
+          <a class="footer-contact-link" href="mailto:vani280301@gmail.com">
+            <span class="icon-container">
+              <img class="contact-icon" src="img\Mail_24x24.png" alt="E:" />
+            </span>
+            <span id="email" class="footer-contact-text"
+              >vani280301@gmail.com</span
+            >
+          </a>
+        </p>
+      </div>
+    </footer>
 
     <script src="main.js" defer></script>
   </body>
@@ -330,10 +445,16 @@
 
 <!-- TODO:
 
-* make hoover on BUTTON
-* highlight the most important key-words through whole the resume (Sections: "About me", "My responsibilities at previous workplaces")
+* creeate Button for Downloading all the documents
 * implement switch from english to german language
-* create FOOTER with: links to every section, my contacts and "Aschaffenburg Unterfranken Deutschland"
+* highlight the most important key-words through whole the resume (Sections: "About me", "My responsibilities at previous workplaces")
+
+-* create the new section for "All Documents and Certificates" in the SIDEBAR!
+There should be a clickable list of all the documents, including:
+Lebenslauf.pdf and all the documents that are on the website
+
+-* create FOOTER with: links to every section, my contacts and "Aschaffenburg Unterfranken Deutschland"
+-* make hoover on BUTTON
 -* switch: official design / creative design
 -* make languages proficiency in die Tabele
 -* make my Projects' examples in die Tabele
